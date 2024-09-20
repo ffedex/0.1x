@@ -215,7 +215,7 @@ if os.date("*t", os.time()).month == 4 then
 	-- This is a reminder how EdgeIY edgy was
 	Title.Text = "Infinite Yiff v"  .. currentVersion
 else
-	Title.Text = "Infinite Yield R v"  .. currentVersion
+	Title.Text = "Modified Version "  .. currentVersion
 end
 do
 	local emoji = ({
@@ -13632,7 +13632,7 @@ local function iyonloadstuff(shouldpopupannouncement)
 
 	if success then
 		if currentVersion ~= latestVersionInfo.Version then
-			notify('Outdated','Get the new version by executing it again (or rejoin if keepiy is enabled)')
+			print("updated just modified LMAOOO")
 		end
 
 		if shouldpopupannouncement then

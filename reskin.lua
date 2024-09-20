@@ -13626,7 +13626,7 @@ IYMouse.Move:Connect(checkTT)
 
 local function iyonloadstuff(shouldpopupannouncement)
 	local success, latestVersionInfo = pcall(function() 
-		local versionJson = game:HttpGet('https://storage.iyr.lol/legacy-iyr/version')
+		local versionJson = game:HttpGet('https://raw.githubusercontent.com/ffedex/0.1x/refs/heads/main/versionjson')
 		return HttpService:JSONDecode(versionJson)
 	end)
 

@@ -2840,10 +2840,10 @@ local loadedEventData = nil
 local jsonAttempts = 0
 function saves()
 	if writefileExploit() and jsonAttempts < 50 then
-		if pcall(function() readfile("IY_FE.iy") end) then
-			if readfile("IY_FE.iy") ~= nil then
+		if pcall(function() readfile("ModifiedIY.iy") end) then
+			if readfile("ModifiedIY.iy") ~= nil then
 				local success, response = pcall(function()
-					local json = HttpService:JSONDecode(readfile("IY_FE.iy"))
+					local json = HttpService:JSONDecode(readfile("ModifiedIY.iy"))
 					if json.prefix ~= nil then prefix = json.prefix else prefix = ';' end
 					if json.StayOpen ~= nil then StayOpen = json.StayOpen else StayOpen = false end
 					if json.keepIY ~= nil then KeepInfYield = json.keepIY else KeepInfYield = true end
@@ -2867,19 +2867,19 @@ function saves()
 					jsonAttempts = jsonAttempts + 1
 					warn("Save Json Error:", response)
 					warn("Overwriting Save File")
-					writefileCooldown("IY_FE.iy", defaults)
+					writefileCooldown("ModifiedIY.iy", defaults)
 					task.wait()
 					saves()
 				end
 			else
-				writefileCooldown("IY_FE.iy", defaults)
+				writefileCooldown("ModifiedIY.iy", defaults)
 				task.wait()
 				saves()
 			end
 		else
-			writefileCooldown("IY_FE.iy", defaults)
+			writefileCooldown("ModifiedIY.iy", defaults)
 			task.wait()
-			if pcall(function() readfile("IY_FE.iy") end) then
+			if pcall(function() readfile("ModifiedIY.iy") end) then
 				saves()
 			else
 				nosaves = true
@@ -3075,7 +3075,7 @@ function updatesaves()
 			currentScroll = {currentScroll.R,currentScroll.G,currentScroll.B};
 			eventBinds = eventEditor.SaveData()
 		}
-		writefileCooldown("IY_FE.iy", HttpService:JSONEncode(update))
+		writefileCooldown("ModifiedIY.iy", HttpService:JSONEncode(update))
 	end
 end
 
@@ -6159,7 +6159,7 @@ end)
 PluginsGUI = PluginEditor.background
 
 function addPlugin(name)
-	if name:lower() == 'plugin file name' or name:lower() == 'iy_fe.iy' or name == 'iy_fe' then
+	if name:lower() == 'plugin file name' or name:lower() == 'ModifiedIY.iy' or name == 'ModifiedIY' then
 		notify('Plugin Error','Please enter a valid plugin')
 	else
 		local file

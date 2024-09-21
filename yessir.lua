@@ -12,7 +12,7 @@ Players = cloneref(game:GetService("Players"))
 if not game:IsLoaded() then
 	local notLoaded = Instance.new("Message")
 	notLoaded.Parent = COREGUI
-	notLoaded.Text = 'Infinite Yield R is waiting for the game to load'
+	notLoaded.Text = 'IYModif is waiting for the game to load'
 
 	game.Loaded:Wait()
 	notLoaded:Destroy()

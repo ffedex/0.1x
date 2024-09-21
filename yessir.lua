@@ -4492,6 +4492,7 @@ CMDs = {}
 CMDs[#CMDs + 1] = {NAME = 'discord / dc', DESC = 'Invite to the Discord server.'}
 CMDs[#CMDs + 1] = {NAME = 'console', DESC = 'Loads old Roblox console'}
 CMDs[#CMDs + 1] = {NAME = 'KAT / KatCombo / KatScript', DESC = 'Loads a script for KAT [all supported]'}
+CMDs[#CMDs + 1] = {NAME = 'fnf / fnfscript', DESC = 'Loads a script for Funky Friday'}
 CMDs[#CMDs + 1] = {NAME = 'unc / unctest / unccheckevn', DESC = 'Tests all UNC Environment'}
 CMDs[#CMDs + 1] = {NAME = 'addunc / addmoreunc / adduncevn', DESC = 'Adds some UNC Environment(s)'}
 CMDs[#CMDs + 1] = {NAME = 'execute / run / code', DESC = 'Execute a LuaU code.'}
@@ -10803,6 +10804,11 @@ end)
 
 addcmd("KAT",{"KatCombo","KatScript"},function(args, speaker)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/ffedex/rqs/refs/heads/main/iykat.lua"))()
+	notify("hell yeah executed")
+end)
+
+addcmd("fnf",{"fnfscript"},function(args, speaker)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Nadir3709/RandomScript/main/FunkyFridayMobile"))()
 	notify("hell yeah executed")
 end)
 

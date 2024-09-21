@@ -13626,13 +13626,13 @@ IYMouse.Move:Connect(checkTT)
 
 local function iyonloadstuff(shouldpopupannouncement)
 	local success, latestVersionInfo = pcall(function() 
-		local versionJson = game:HttpGet('https://raw.githubusercontent.com/ffedex/0.1x/refs/heads/main/versionjson')
+		local versionJson = game:HttpGet('https://raw.githubusercontent.com/ffedex/0.1x/refs/heads/main/announcementshii')
 		return HttpService:JSONDecode(versionJson)
 	end)
 
 	if success then
 		if currentVersion ~= latestVersionInfo.Version then
-			print("updated just modified LMAOOO")
+			print("updated, just modified LMAOOO (IYMODIF MESSAGE)")
 		end
 
 		if shouldpopupannouncement then
